@@ -1,7 +1,8 @@
 import { create } from 'zustand';
 import axios from 'axios';
+import { API_URL } from '../config';
 
-const API = 'http://localhost:5000/api';
+const API = API_URL;
 
 const getLastSeen = () => localStorage.getItem('adminNotifSeenAt') || null;
 const setLastSeen = (date) => localStorage.setItem('adminNotifSeenAt', date);

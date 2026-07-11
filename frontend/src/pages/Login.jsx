@@ -3,6 +3,7 @@ import { useNavigate, Link, useSearchParams } from 'react-router-dom';
 import useAuthStore from '../store/useAuthStore';
 import { User, Lock, ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { API_URL } from '../config';
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -164,7 +165,7 @@ const Login = () => {
             </div>
 
             <motion.a
-              href="http://localhost:5000/api/auth/google"
+              href={`${API_URL}/auth/google`}
               variants={{ hidden: { opacity: 0, y: 10 }, visible: { opacity: 1, y: 0 } }}
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}

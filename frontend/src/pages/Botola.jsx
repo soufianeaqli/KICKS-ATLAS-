@@ -7,8 +7,9 @@ import useAuthStore from '../store/useAuthStore';
 import ProductFormModal from '../components/ProductFormModal';
 import ConfirmModal from '../components/ConfirmModal';
 import axios from 'axios';
+import { API_URL } from '../config';
 
-const API = 'http://localhost:5000/api';
+const API = API_URL;
 
 const getAuthHeaders = () => {
   const info = localStorage.getItem('userInfo');

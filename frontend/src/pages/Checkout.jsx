@@ -6,8 +6,9 @@ import useCartStore from '../store/useCartStore';
 import useAuthStore from '../store/useAuthStore';
 import ConfirmModal from '../components/ConfirmModal';
 import { Gift, Crown } from 'lucide-react';
+import { API_URL } from '../config';
 
-const API = 'http://localhost:5000/api';
+const API = API_URL;
 
 const Checkout = () => {
   const navigate = useNavigate();

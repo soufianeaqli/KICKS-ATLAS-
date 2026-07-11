@@ -1,5 +1,6 @@
 import { create } from 'zustand';
 import axios from 'axios';
+import { API_URL } from '../config';
 
 const useProductStore = create((set) => ({
   products: [],
@@ -13,7 +14,7 @@ const useProductStore = create((set) => ({
     set({ loading: true, error: null });
     try {
       const query = new URLSearchParams({ team, ...params }).toString();
-      const { data } = await axios.get(`http://localhost:5000/api/products?${query}`);
+      const { data } = await axios.get(`${API_URL}/products?${query}`);
       set({ products: data.products, page: data.page, pages: data.pages, loading: false });
     } catch (error) {
       set({ 
@@ -26,7 +27,7 @@ const useProductStore = create((set) => ({
   fetchProductById: async (id) => {
     set({ loading: true, error: null });
     try {
-      const { data } = await axios.get(`http://localhost:5000/api/products/${id}`);
+      const { data } = await axios.get(`${API_URL}/products/${id}`);
       set({ product: data, loading: false });
     } catch (error) {
       set({ 

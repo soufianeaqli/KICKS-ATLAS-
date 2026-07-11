@@ -5,8 +5,9 @@ import axios from 'axios';
 import useAuthStore from '../store/useAuthStore';
 import { Gift, Crown, ShoppingBag, Trophy, CheckCircle, Clock, Settings, X, Save, Search, Sparkles, Lock, ArrowRight } from 'lucide-react';
 import useCartStore from '../store/useCartStore';
+import { API_URL } from '../config';
 
-const API = 'http://localhost:5000/api';
+const API = API_URL;
 
 /* -------------------------------------------------------------------------- */
 /*  Animated progress bar                                                       */

@@ -1,8 +1,9 @@
 import React, { useState, useRef } from 'react';
 import axios from 'axios';
 import { Star, Upload, X, Camera } from 'lucide-react';
+import { API_URL } from '../config';
 
-const API = 'http://localhost:5000/api';
+const API = API_URL;
 
 const ReviewForm = ({ productId, onReviewSubmitted, userInfo }) => {
   const [rating, setRating] = useState(0);

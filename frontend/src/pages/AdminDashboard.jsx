@@ -5,8 +5,9 @@ import useAuthStore from '../store/useAuthStore';
 import axios from 'axios';
 import { MessageSquare, Search, Mail, MailOpen, ChevronDown, ChevronUp, Trash2, Users, Shield, UserX, ShoppingCart, Package, CheckCircle, Star, Gift, Crown, Settings, Eye, EyeOff, Plus, X, Edit } from 'lucide-react';
 import ConfirmModal from '../components/ConfirmModal';
+import { API_URL } from '../config';
 
-const API = 'http://localhost:5000/api';
+const API = API_URL;
 
 const getAuthHeaders = () => {
   const info = localStorage.getItem('userInfo');

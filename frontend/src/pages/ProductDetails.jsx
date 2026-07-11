@@ -10,8 +10,9 @@ import useAuthStore from '../store/useAuthStore';
 import ConfirmModal from '../components/ConfirmModal';
 import ReviewForm from '../components/ReviewForm';
 import ReviewList from '../components/ReviewList';
+import { API_URL } from '../config';
 
-const API = 'http://localhost:5000/api';
+const API = API_URL;
 
 const ProductDetails = () => {
   const { id } = useParams();

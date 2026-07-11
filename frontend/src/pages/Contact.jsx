@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Send, CheckCircle, Lock, User, MessageSquare, FileText, Clock, ChevronRight } from 'lucide-react';
 import useAuthStore from '../store/useAuthStore';
+import { API_URL } from '../config';
 
 const Contact = () => {
   const { userInfo } = useAuthStore();
@@ -21,7 +22,7 @@ const Contact = () => {
     setLoading(true);
     setError('');
     try {
-      const res = await fetch('http://localhost:5000/api/contact', {
+      const res = await fetch(`${API_URL}/contact`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(form),

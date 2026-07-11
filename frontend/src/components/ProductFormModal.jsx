@@ -3,8 +3,9 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { X } from 'lucide-react';
 import axios from 'axios';
 import zelijPatternUrl from '../assets/moroccan_flag_zelij.png';
+import { API_URL } from '../config';
 
-const API = 'http://localhost:5000/api';
+const API = API_URL;
 
 const getAuthHeaders = () => {
   const info = localStorage.getItem('userInfo');

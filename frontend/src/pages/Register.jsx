@@ -4,6 +4,7 @@ import useAuthStore from '../store/useAuthStore';
 import { User, Lock, Mail, ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 import axios from 'axios';
+import { API_URL } from '../config';
 
 const Register = () => {
   const [name, setName] = useState('');
@@ -22,7 +23,7 @@ const Register = () => {
     e.preventDefault();
     setErrorLocal('');
     try {
-      const { data } = await axios.post('http://localhost:5000/api/auth/register', { name, email, password });
+      const { data } = await axios.post(`${API_URL}/auth/register`, { name, email, password });
       setUserInfo(data);
     } catch (error) {
       setErrorLocal(error.response && error.response.data.message ? error.response.data.message : error.message);

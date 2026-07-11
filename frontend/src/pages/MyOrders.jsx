@@ -5,8 +5,9 @@ import axios from 'axios';
 import useAuthStore from '../store/useAuthStore';
 import { Package, ChevronDown, ChevronUp, ShoppingCart, Truck, Trash2, ChevronLeft, ChevronRight } from 'lucide-react';
 import LoadingSpinner from '../components/LoadingSpinner';
+import { API_URL } from '../config';
 
-const API = 'http://localhost:5000/api';
+const API = API_URL;
 const PER_PAGE = 6;
 
 const MyOrders = () => {

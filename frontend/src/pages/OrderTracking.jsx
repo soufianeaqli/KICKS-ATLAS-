@@ -3,8 +3,9 @@ import { useSearchParams } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Package, Search, Truck, CheckCircle, Clock, MapPin, ShoppingBag, Phone, User, Locate } from 'lucide-react';
 import DeliveryMap from '../components/DeliveryMap';
+import { API_URL } from '../config';
 
-const API = 'http://localhost:5000/api';
+const API = API_URL;
 
 const statusConfig = {
   pending: { label: 'En attente', color: 'text-yellow-400', icon: Clock },

@@ -5,8 +5,9 @@ import axios from 'axios';
 import useAuthStore from '../store/useAuthStore';
 import ConfirmModal from '../components/ConfirmModal';
 import { User, Save, Crown, Clock, Mail, Lock, Shield, Calendar, CheckCircle, AlertTriangle, Eye, EyeOff, ChevronRight, Package } from 'lucide-react';
+import { API_URL } from '../config';
 
-const API = 'http://localhost:5000/api';
+const API = API_URL;
 
 const Profile = () => {
   const { userInfo, setUserInfo } = useAuthStore();
